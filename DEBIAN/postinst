@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+case "$1" in
+    configure)
+        systemctl enable 'calendard.service'
+        systemctl daemon-reload
+        systemctl stop 'calendard.service'
+        systemctl start 'calendard.service'
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'"
+        exit 0
+    ;;
+esac
+exit 0

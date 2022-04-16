@@ -1,0 +1,6 @@
+Package: calendar-daemon
+Architecture: all
+Maintainer: k.echchennouf@gmail.com
+Priority: optional
+Version: 1.0.0
+Description: calendar-daemon

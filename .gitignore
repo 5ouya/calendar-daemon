@@ -1,0 +1,6 @@
+node_modules
+build
+package_build_dir
+secrets
+bin
+config-local.ini

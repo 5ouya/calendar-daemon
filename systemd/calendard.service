@@ -1,0 +1,14 @@
+[Unit]
+Description=calendar-daemon
+
+[Service]
+ExecStart=/opt/calendar-daemon/calendard
+Restart=always
+Environment=PATH=/bin/:/bin/sbin/:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+WorkingDirectory=/opt/calendar-daemon/
+StandardInput=journal
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    remove)
+        echo "removed"
+            systemctl stop 'calendard.service'
+            systemctl disable 'calendard.service'
+    ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1'"
+        exit 0
+    ;;
+esac
+
+exit 0
