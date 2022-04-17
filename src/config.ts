@@ -10,13 +10,10 @@ program.option(
   "path to config.ini file",
   "./config/config.ini"
 );
-
 program.parse();
 
 const options = program.opts();
-
 const { configFile = configFilePath } = options;
-
 let config: IConfig;
 
 try {
