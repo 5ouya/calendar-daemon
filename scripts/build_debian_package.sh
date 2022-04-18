@@ -11,8 +11,8 @@ mkdir -p ./package_build_dir/calendar-daemon/opt/calendar-daemon/
 mkdir -p ./package_build_dir/calendar-daemon/opt/calendar-daemon/secrets
 mkdir -p ./package_build_dir/calendar-daemon/etc/systemd/system/
 
-cp ./bin/calendard ./package_build_dir/calendar-daemon/opt/calendar-daemon/calendard
-cp -r ./config ./package_build_dir/calendar-daemon/opt/calendar-daemon/
+cp ./bin/calendard-linux ./package_build_dir/calendar-daemon/opt/calendar-daemon/calendard
+cp  ./config/config.ini ./package_build_dir/calendar-daemon/opt/calendar-daemon/
 
 cp ./package.json ./package_build_dir/calendar-daemon/opt/calendar-daemon/
 cp ./systemd/calendard.service ./package_build_dir/calendar-daemon/etc/systemd/system/calendard.service

@@ -4,6 +4,8 @@ set -e
 case "$1" in
     remove)
         echo "removed"
+        rm /etc/systemd/system/calendard.service
+        rm -r /opt/calendar-daemon/config
     ;;
 
     *)

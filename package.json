@@ -9,7 +9,7 @@
     "postversion": "./scripts/post-version.sh",
     "dev": "nodemon",
     "build": "tsc",
-    "build:bin": "pkg ./build/index.js --target linux --output bin/calendard && chmod +x bin/calendard",
+    "build:bin": "pkg ./build/index.js --target linux,macos,windows --output bin/calendard && chmod +x bin/calendard*",
     "build:debian:package": "./scripts/build_debian_package.sh"
   },
   "dependencies": {
