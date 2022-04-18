@@ -1,4 +1,4 @@
-import { google } from "googleapis";
+import { calendar as googleCalendar } from "@googleapis/calendar";
 import cron from "node-cron";
 
 import config from "./config";
@@ -19,7 +19,7 @@ const {
   cron: { expression },
 } = config;
 
-export const calendar = google.calendar({
+export const calendar = googleCalendar({
   version: "v3",
   auth: auth(secrets),
 });

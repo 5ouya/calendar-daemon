@@ -3,12 +3,12 @@ import path from "path";
 import ini from "ini";
 import { program } from "commander";
 
-const configFilePath = path.join(process.cwd(), "config", "config.ini");
+const configFilePath = path.join(process.cwd(), "config.ini");
 
 program.option(
   "-c, --config-file <path>",
   "path to config.ini file",
-  "./config/config.ini"
+  "./config.ini"
 );
 program.parse();
 

@@ -25,29 +25,40 @@ simple service to edit google calendar events via googleapis
 ```$ yarn build:debian:package```
 
 ### Run binary
+#### Download
+- [calendard-linux](https://github.com/5ouya/calendar-daemon/releases/download/v1.0.0/calendard-linux.zip)
+- [calendard-macos](https://github.com/5ouya/calendar-daemon/releases/download/v1.0.0/calendard-macos.zip)
+- [calendard-win.exe](https://github.com/5ouya/calendar-daemon/releases/download/v1.0.0/calendard-win.zip) 
+
+#### Or
 #### Build
 ```$ yarn build && yarn build:bin```
-
 #### Configuration
-- Edit `./config/config.ini`
+- Edit `./config.ini` ([example config.ini](https://raw.githubusercontent.com/5ouya/calendar-daemon/main/config.ini))
 
 #### Options
-`-c | --config-file` to set config-file path. Default is `./config/config.ini` 
+`-c | --config-file` to set config-file path. Default is `./config.ini` 
 #### Start
-```$ ./bin/calendard``` using default config file path\
-```$ ./bin/calendard -c config-local.ini```
+```$ ./calendard-linux``` using default config file path\
+```$ ./calendard-linux -c config-local.ini```\
+Or\
+```$ ./bin/calendard-linux``` using default config file path\
+```$ ./bin/calendard-linux -c config-local.ini```\
 
 
-## Run as daemon
-
-### Build
+### Run as daemon
+#### Download
+[calendard-daemon.deb](https://github.com/5ouya/calendar-daemon/releases/download/v1.0.0/calendar-daemon.deb)
+#### Or
+#### Build
 ```$ yarn build && yarn build:bin && yarn build:debian:package```
 ### Install 
+```# dpkg -i calendar-daemon.deb``` \
+Or\
 ```# dpkg -i package_build_dir/calendar-daemon.deb``` \
 The service runs after installation
 ### Configuration
-- Edit `/opt/calendar-daemon/config/config.ini`
-- Put the `keyFile` in `/opt/calendar-deamon/secrets/`
+- Edit `/opt/calendar-daemon/config.ini`
 - ```# service calendard restart``` to read config changes
 ### Control
 - ```# service calendard status```
